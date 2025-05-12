@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobility Routine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="icon.jpg">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div id="app">
+        <div id="exercise-panel">
+            <h1 style="text-align:center; color:#008080;">Mobility Routine</h1>
+            <div id="exercise-meta">
+                <div id="exercise-number">Übung –</div>
+            </div>
+            <div id="current-exercise">
+                <h2 id="exercise-title">Bereit?</h2>
+                <p id="exercise-desc">Klicke auf ▶, um zu beginnen.</p>
+            </div>
+            <div id="next-exercise"><strong>Nächste Übung:</strong> <span id="next-title">–</span></div>
+            <div id="timer-display">
+                <span id="timer">00:00</span>
+                <span id="total-time">/ 00:00</span>
+            </div>
+            <div id="progress-bar"><div id="progress"></div></div>
+        </div>
+        <div id="controls">
+            <button id="back-button">&#10094;&#10094;</button> <!-- << -->
+            <button id="start-button">&#9654;</button>         <!-- ▶ -->
+            <button id="stop-button">&#10073;&#10073;</button> <!-- || -->
+            <button id="next-button">&#10095;&#10095;</button> <!-- >> -->
+        </div>
+    </div>
+    <audio id="beep" src="ding.wav" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
