@@ -83,7 +83,7 @@ function loadExercise(index) {
     document.getElementById("exercise-desc").textContent = exercise.desc;
     document.getElementById("next-title").textContent = exercises[index + 1] ? exercises[index + 1].title : "–";
     numberEl.textContent = `Exercise ${index + 1} of ${exercises.length}`;
-    iconEl.src = exercise.image;
+    iconEl.src = "./" + exercise.image;
     timeLeft = exercise.duration;
     updateTimerDisplay();
     audio.play();
