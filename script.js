@@ -127,10 +127,11 @@ function nextExercise(manual = false) {
 function prevExercise(manual = false) {
     if (current > 0) {
         if (manual) {
-            totalTimeLeft += (exercises[current].duration - timeLeft);
-            elapsed -= (exercises[current].duration - timeLeft);
+            elapsed -= exercises[current - 1].duration;
+            totalTimeLeft += exercises[current - 1].duration;
         }
         current--;
+        stopRoutine();
         loadExercise(current);
     }
 }
